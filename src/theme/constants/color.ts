@@ -1,19 +1,3 @@
-type DefaultColors = {
-  background: string;
-  section: string;
-  highlight: string;
-  accent: string;
-  content: string;
-  primary: string;
-  secondary: string;
-  alternative: string;
-  success: string;
-  warning: string;
-  error: string;
-  pureWhite: string;
-  pureBlack: string;
-};
-
 export const LIGHT_THEME = {
   background: '#F5F5FB',
   section: '#FBFBFB',
@@ -49,7 +33,7 @@ export const COMMON_COLORS = {
   pureBlack: '#000000',
 };
 
-export type ColorTypes = DefaultColors;
+export type ColorTypes = typeof COMMON_COLORS & typeof LIGHT_THEME;
 export type ColorKeys = keyof ColorTypes;
 
 export type ThemeVariant = 'light' | 'dark' | 'ocean';

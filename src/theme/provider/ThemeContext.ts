@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { ColorTypes, ThemeVariant } from '../../constants/color';
+import { ColorTypes, ThemeVariant } from '../constants/color';
 
 interface ThemeContextType {
   theme: ThemeVariant;

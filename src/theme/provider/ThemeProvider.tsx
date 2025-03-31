@@ -1,11 +1,10 @@
 import React, { useCallback, useEffect } from 'react';
 import { ThemeContext } from './ThemeContext';
 import { globalStyles } from '../global/styles';
-import { FONT_SIZE } from '../../constants/fontSize';
-import { FONT_WEIGHT } from '../../constants/fontWeight';
-import { SPACING } from '../../constants/spacing';
-import { BORDER_RADIUS } from '../../constants/borderRadius';
-import { BORDER_WIDTH } from '../../constants/borderWidth';
+import { FONT_SIZE } from '../constants/fontSize';
+import { FONT_WEIGHT } from '../constants/fontWeight';
+import { BORDER_RADIUS } from '../constants/borderRadius';
+import { BORDER_WIDTH } from '../constants/borderWidth';
 
 import {
   ColorTypes,
@@ -14,7 +13,7 @@ import {
   DARK_THEME,
   OCEAN_THEME,
   COMMON_COLORS,
-} from '../../constants/color';
+} from '../constants/color';
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -54,7 +53,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       ...FONT_WEIGHT,
       ...BORDER_RADIUS,
       ...BORDER_WIDTH,
-      ...SPACING,
       ...customTheme,
     };
 

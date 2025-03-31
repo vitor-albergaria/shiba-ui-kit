@@ -1,16 +1,3 @@
-type DefaultFontSize = {
-  xs: number;
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
-  '2x': number;
-  '3x': number;
-  '4x': number;
-  '5x': number;
-  '6x': number;
-};
-
 export const FONT_SIZE = {
   xs: 1.0,
   sm: 1.2,
@@ -24,5 +11,5 @@ export const FONT_SIZE = {
   '6x': 3.6,
 };
 
-export type FontSizeTypes = DefaultFontSize;
-export type FontSizeKeys = keyof FontSizeTypes;
+export type FontSizeTypes = typeof FONT_SIZE;
+export type FontSizeKeys = keyof typeof FONT_SIZE;

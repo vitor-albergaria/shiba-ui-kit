@@ -1,11 +1,3 @@
-type DefaultBorderRadius = {
-  rm: string;
-  xs: string;
-  sm: string;
-  md: string;
-  lg: string;
-};
-
 export const BORDER_RADIUS = {
   rm: '0px',
   xs: '4px',
@@ -14,5 +6,5 @@ export const BORDER_RADIUS = {
   lg: '32px',
 };
 
-export type BorderRadiusTypes = DefaultBorderRadius;
-export type BorderRadiusKeys = keyof BorderRadiusTypes;
+export type BorderRadiusTypes = typeof BORDER_RADIUS;
+export type BorderRadiusKeys = keyof typeof BORDER_RADIUS;
