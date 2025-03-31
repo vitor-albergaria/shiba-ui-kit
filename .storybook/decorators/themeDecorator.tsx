@@ -8,7 +8,7 @@ export const themeDecorator: Decorator = (Story) => {
   const selectedTheme = localStorage.getItem('theme') || 'light';
 
   return (
-    <ThemeProvider defaultTheme={selectedTheme as ThemeVariant}>
+    <ThemeProvider selectedTheme={selectedTheme as ThemeVariant}>
       <CenterContainer>
         <Story />
       </CenterContainer>

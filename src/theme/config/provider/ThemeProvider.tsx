@@ -18,16 +18,16 @@ import {
 
 interface ThemeProviderProps {
   children: React.ReactNode;
-  defaultTheme?: ThemeVariant;
+  selectedTheme?: ThemeVariant;
   customTheme?: Partial<ColorTypes>;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
-  defaultTheme = 'light',
+  selectedTheme = 'light',
   customTheme = {},
 }) => {
-  const [theme, setTheme] = React.useState<ThemeVariant>(defaultTheme);
+  const [theme, setTheme] = React.useState<ThemeVariant>(selectedTheme);
 
   const getAndApplyGlobalStyles = useCallback(() => {
     const existingStyle = document.getElementById('shiba-ui-global-styles');
