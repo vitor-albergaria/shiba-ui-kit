@@ -1,7 +1,5 @@
 import { FONT_SIZE } from '../constants/fontSize';
-import { BORDER_RADIUS } from '../constants/borderRadius';
 import { COMMON_COLORS, LIGHT_THEME } from '../constants/color';
-import { BORDER_WIDTH } from '../constants/borderWidth';
 import { FONT_WEIGHT } from '../constants/fontWeight';
 
 export function getThemeColor(color: string): string {
@@ -18,22 +16,6 @@ export function getThemeFontSize(size: string): string {
   }
 
   return size;
-}
-
-export function getThemeBorderRadius(radius: string): string {
-  if (Object.keys(BORDER_RADIUS).includes(radius)) {
-    return `var(--${radius})`;
-  }
-
-  return radius;
-}
-
-export function getThemeBorderWidth(width: string): string {
-  if (Object.keys(BORDER_WIDTH).includes(width)) {
-    return `var(--${width})`;
-  }
-
-  return width;
 }
 
 export function getThemeFontWeight(weight: string): string {

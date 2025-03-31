@@ -3,8 +3,6 @@ import { ThemeContext } from './ThemeContext';
 import { globalStyles } from '../global/styles';
 import { FONT_SIZE } from '../constants/fontSize';
 import { FONT_WEIGHT } from '../constants/fontWeight';
-import { BORDER_RADIUS } from '../constants/borderRadius';
-import { BORDER_WIDTH } from '../constants/borderWidth';
 
 import {
   ColorTypes,
@@ -48,18 +46,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
 
     const finalTheme = {
       ...baseColorTheme,
-      ...COMMON_COLORS,
       ...FONT_SIZE,
       ...FONT_WEIGHT,
-      ...BORDER_RADIUS,
-      ...BORDER_WIDTH,
+      ...COMMON_COLORS,
       ...customTheme,
     };
 
     const root = document.documentElement;
 
     Object.entries(finalTheme).forEach(([key, value]) => {
-      root.style.setProperty(`--${key}`, String(value));
+      root.style.setProperty(`--${key}`, value);
     });
   }, [theme, customTheme]);
 

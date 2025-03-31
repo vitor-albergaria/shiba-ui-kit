@@ -1,14 +1,14 @@
 export const FONT_SIZE = {
-  xs: 1.0,
-  sm: 1.2,
-  md: 1.4,
-  lg: 1.6,
-  xl: 1.8,
-  '2x': 2.0,
-  '3x': 2.4,
-  '4x': 2.8,
-  '5x': 3.2,
-  '6x': 3.6,
+  xs: '1.0rem',
+  sm: '1.2rem',
+  md: '1.4rem',
+  lg: '1.6rem',
+  xl: '1.8rem',
+  '2x': '2.0rem',
+  '3x': '2.4rem',
+  '4x': '2.8rem',
+  '5x': '3.2rem',
+  '6x': '3.6rem',
 };
 
 export type FontSizeTypes = typeof FONT_SIZE;
