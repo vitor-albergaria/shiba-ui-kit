@@ -1,4 +1,7 @@
-import { IIconList } from '../../components/Feedback/Icon/types';
+type IIconList = {
+  path: string[];
+  view?: string;
+};
 
 export const HouseIcon: IIconList = {
   path: [

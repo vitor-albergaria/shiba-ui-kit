@@ -3,14 +3,12 @@ import { t } from 'i18next';
 
 export const DocsTitle: React.FC<{ text: string }> = ({ text }) => {
   const title = t(text) || 'TITLE';
-  console.log('TITLE', text);
 
   return <h2>{title}</h2>;
 };
 
 export const DocsDescription: React.FC<{ text: string }> = ({ text }) => {
   const description = t(text) || 'DESCRIPTION';
-  console.log('DESCRIPTION', text);
 
   return <h6>{description}</h6>;
 };
