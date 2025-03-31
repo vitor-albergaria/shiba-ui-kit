@@ -1,0 +1,39 @@
+import { t } from 'i18next';
+import { Meta } from '@storybook/blocks';
+import { DocsTitle, DocsDescription } from '../components/TextElements';
+
+<Meta title='Quick Start/Introduction' />
+
+<DocsTitle text='docs_install_title' />
+<DocsDescription text='docs_install_description' />
+
+```bash
+npm install shiba-ui-kit
+```
+
+```bash
+yarn add shiba-ui-kit
+```
+
+<DocsTitle text='docs_provider_title' />
+<DocsDescription text='docs_provider_description' />
+
+```jsx
+import React from 'react';
+import { ThemeProvider } from 'shiba-ui-kit';
+
+function App() {
+  return <ThemeProvider>{/* Components... */}</ThemeProvider>;
+}
+```
+
+<DocsTitle text='docs_usage_title' />
+<DocsDescription text='docs_usage_description' />
+
+```jsx
+import { Button } from 'shiba-ui-kit';
+
+function MyComponent() {
+  return <Button text='Clique aqui' onClick={() => alert('Shiba UI!')} />;
+}
+```

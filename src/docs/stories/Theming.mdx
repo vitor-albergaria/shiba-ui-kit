@@ -1,0 +1,37 @@
+import { t } from 'i18next';
+import { Meta } from '@storybook/blocks';
+import { DocsTitle, DocsDescription } from '../components/TextElements';
+
+<Meta title='Quick Start/Theming' />
+
+<DocsTitle text='docs_theming_title' />
+<DocsDescription text='docs_theming_description' />
+
+```jsx
+import { ThemeProvider } from 'shiba-ui-kit';
+
+const customTheme = {
+  primary: '#ff5733',
+};
+
+function App() {
+  return (
+    <ThemeProvider customTheme={customTheme}>
+      {/* Components... */}
+    </ThemeProvider>
+  );
+}
+```
+
+<DocsTitle text='docs_theme_title' />
+<DocsDescription text='docs_theme_description' />
+
+```jsx
+import { ThemeProvider } from 'shiba-ui-kit';
+
+function App() {
+  return (
+    <ThemeProvider selectedTheme='dark'>{/* Components... */}</ThemeProvider>
+  );
+}
+```
