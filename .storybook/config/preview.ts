@@ -8,8 +8,6 @@ import { DocsSettings } from '../../src/docs/components/DocsSettings';
 export const decorators = [themeDecorator, i18nDecorator];
 
 const preview: Preview = {
-  tags: ['autodocs'],
-
   parameters: {
     docsOnly: true,
     layout: 'fullscreen',

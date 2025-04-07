@@ -25,38 +25,6 @@ export const en = {
     font_weight_title: 'Font Weight',
     font_weight_description:
       'Font weights are categorized to provide a range of typographic emphasis and hierarchy.',
-
-    docs_icon_selection: 'Accepts predefined icon names for selection.',
-    docs_color: 'Accepts predefined theme colors or CSS color values.',
-
-    docs_predefined: 'Accepts only fixed values, as listed below:',
-    docs_type_number: 'Accepts a `number` to specify the style.',
-
-    docs_content: 'Accepts a `string` to set the text content.',
-    docs_font_family:
-      'Accepts predefined or custom font families to set the text.',
-    docs_values_predefined:
-      'Accepts predefined values or values in `string` format.',
-    docs_text_decoration:
-      'Accepts `string` values to define the text decoration.',
-    docs_number: 'Accepts values in `number` format.',
-    docs_font_weight:
-      'Accepts predefined options or `string` values to define the font weight.',
-    docs_text_align:
-      'Accepts predefined options or `string` values to align the text.',
-    docs_letter_spacing:
-      'Accepts a `number` to set the letter spacing of the text.',
-    docs_hide: 'Accepts a `boolean` to hide the component.',
-    docs_line_height: 'Accepts a `number` to set the line height.',
-    docs_sample_text: 'Sample Text',
-    docs_click: 'Accepts a function to be called on component click.',
-    docs_loading: 'Accepts a `boolean` to set the component to loading.',
-    docs_disabled: 'Accepts a `boolean` to set the component to disabled.',
-    docs_variant: 'Accepts predefined options to set the variant.',
-    docs_shadow: 'Accepts predefined options to set the box shadow.',
-    docs_full_width:
-      'Accepts a `boolean` to determine if the component should occupy the full available space.',
-    docs_copied: 'Copied!',
     docs_toast: `
 
 The \`ToastContainer\` component is used to display toast notifications in your application. 
@@ -119,29 +87,9 @@ const customToast = toast.success('Mensagem de exemplo', {
 })
 \`\`\`
 `,
-    docs_on_change:
-      'Accepts a function to be called when the component is changed.',
-    docs_value: 'Accepts a `number` to set the value.',
-    spacing_title: 'Spacing',
-    spacing_description:
-      'This section presents the spacings available in the design system. Spacings play a crucial role in the layout, ensuring consistent alignment and a clear visual hierarchy between elements.',
     settings_language: 'Language',
     settings_confirm: 'Confirm',
     settings_theme: 'Theme',
-    docs_image:
-      'Accepts a `string` to set the image source, which can be either a URL or a relative path to a local image.',
-    docs_rating:
-      'Accepts a `number` to represent the current rating value, typically between 0 and `maxStars`.',
-    docs_maxStars:
-      'Accepts a `number` to set the maximum number of stars displayed for the rating.',
-    docs_readonly:
-      'Accepts a `boolean` to specify if the rating is read-only, preventing user interaction.',
-    docs_children:
-      'Accepts a `ReactNode` to define the children elements to be rendered.',
-    docs_position:
-      "Accepts a string to specify the position: 'top', 'bottom', 'left', or 'right'.",
-    docs_data:
-      "Accepts an array of objects, each containing 'percent', 'color', and 'label' to define pie chart segments.",
     docs_install_title: 'Installation',
     docs_install_description: 'To install the library, use npm or yarn:',
     docs_provider_title: 'Theme Provider Setup',
@@ -164,9 +112,5 @@ const customToast = toast.success('Mensagem de exemplo', {
       'To get started, install styled-components using npm or yarn:',
     docs_styling_description_two:
       'Once you have styled-components installed, use the useTheme hook to access the theme and pass it to your styled components:',
-    docs_header:
-      'Accepts an array of objects with id, label, handleClick function, and optionally isInactive to disable an item.',
-    docs_timeline:
-      'Accepts an array of objects with id, title, subtitle, and details (an array of strings).',
   },
 };
