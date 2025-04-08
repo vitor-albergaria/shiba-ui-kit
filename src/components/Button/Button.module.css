@@ -1,0 +1,51 @@
+@keyframes flash {
+  0% {
+    left: -80px;
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 50px);
+    opacity: 1;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-style: solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -80px;
+  height: 100px;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(20deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button:hover:not(:disabled):not([aria-busy='true'])::before {
+  animation: flash 0.5s;
+}
+
+.button:active:not(:disabled):not([aria-busy='true']) {
+  position: relative;
+  top: 1px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background: var(--highlight) !important;
+}
+
+.button[aria-busy='true'] {
+  cursor: not-allowed;
+}

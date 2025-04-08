@@ -58,6 +58,6 @@
     "start": "storybook dev -p 8008 -c ./.storybook/config",
     "build": "tsc -b && vite build",
     "build-storybook": "storybook build -c ./.storybook/config",
-    "test": "jest"
+    "test": "jest --watchAll"
   }
 }
