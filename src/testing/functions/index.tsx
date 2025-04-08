@@ -1,5 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
+import { ThemeProvider } from '../../theme/provider/ThemeProvider';
+
 import {
   IAttributesTest,
   IInteractionTest,
@@ -9,7 +11,6 @@ import {
   ITextContentTest,
   IVariantTest,
 } from './types';
-import { ThemeProvider } from '../../theme/provider/ThemeProvider';
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(<ThemeProvider>{component}</ThemeProvider>);

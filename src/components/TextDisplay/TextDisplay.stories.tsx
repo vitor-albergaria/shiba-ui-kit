@@ -1,10 +1,9 @@
-import { t } from 'i18next';
 import { TextDisplay } from './TextDisplay';
 import { Meta, StoryObj } from '@storybook/react';
 import { ITextDisplay } from './TextDisplay.types';
 
 const meta: Meta<ITextDisplay> = {
-  title: 'Components/TextElements/TextDisplay',
+  title: 'Components/Typography/TextDisplay',
   component: TextDisplay,
 };
 
@@ -12,9 +11,9 @@ export default meta;
 
 type Story = StoryObj<ITextDisplay>;
 
-export const Example: Story = {
+export const Default: Story = {
   args: {
-    text: t('docs_sample_text'),
+    text: 'Hello World!',
     color: 'content',
     fontSize: 'lg',
     fontWeight: 'regular',
