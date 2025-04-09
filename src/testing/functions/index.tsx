@@ -71,27 +71,6 @@ export const testComponentAttributes = <P extends object>({
   });
 };
 
-export const testComponentVariant = <P extends object>({
-  testId,
-  component: Component,
-  variant,
-  expectedResultingStyles,
-}: IVariantTest<P>) => {
-  it(`should render the component ${testId} with correct ${variant} variant styles`, () => {
-    const { getByTestId } = renderWithTheme(
-      <Component {...({ variant: variant } as P)} />
-    );
-
-    const element = getByTestId(testId);
-
-    for (const [cssProperty, expectedCssValue] of Object.entries(
-      expectedResultingStyles
-    )) {
-      expect(element).toHaveStyle(`${cssProperty}: ${expectedCssValue}`);
-    }
-  });
-};
-
 export const testComponentText = <P extends object>({
   testId,
   component: Component,
