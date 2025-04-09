@@ -198,7 +198,6 @@ export const testComponentIconRendering = <P extends object>({
 export const testComponentDisabledBehavior = <P extends object>({
   testId,
   component: Component,
-  expectedResultingStyles,
 }: IVariantTest<P>) => {
   it(`should render the component ${testId} as disabled`, () => {
     const { getByTestId } = renderWithTheme(
@@ -206,12 +205,7 @@ export const testComponentDisabledBehavior = <P extends object>({
     );
 
     const element = getByTestId(testId);
-
-    for (const [cssProperty, expectedCssValue] of Object.entries(
-      expectedResultingStyles
-    )) {
-      expect(element).toHaveStyle(`${cssProperty}: ${expectedCssValue}`);
-    }
+    expect(element).toHaveAttribute('aria-disabled', 'true');
   });
 };
 

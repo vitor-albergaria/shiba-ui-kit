@@ -65,9 +65,6 @@ describe('UI Component: Button', () => {
   testComponentDisabledBehavior({
     testId: 'button',
     component: Button,
-    expectedResultingStyles: {
-      background: 'var(--highlight)',
-    },
   });
 
   testComponentLoadingBehavior({

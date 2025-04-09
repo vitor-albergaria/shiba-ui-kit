@@ -32,5 +32,5 @@ export interface IVariantTest<T> {
   testId: string;
   component: React.FC<T>;
   variant?: string;
-  expectedResultingStyles: { [key: string]: string | number };
+  expectedResultingStyles?: { [key: string]: string | number };
 }
