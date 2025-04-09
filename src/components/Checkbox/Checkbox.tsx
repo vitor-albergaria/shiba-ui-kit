@@ -1,4 +1,4 @@
-import { ICheckbox } from './types';
+import { ICheckbox } from './Checkbox.types';
 import styles from './Checkbox.module.css';
 import React, { useState, useEffect } from 'react';
 import { handleDynamicStyles } from '../../theme/helpers/handleDinamicStyles';
