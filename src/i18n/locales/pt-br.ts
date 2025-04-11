@@ -37,7 +37,7 @@ Adicione o \`ToastContainer\` no seu componente:
 
 \`\`\`jsx
 import React from 'react';
-import ToastContainer, { toast } from 'shiba-ui';
+import ToastContainer, { toast } from 'shiba-ui-kit';
 
 function App() {
   return (
@@ -56,7 +56,7 @@ export default App;
 Utilize as funções de toast para exibir mensagens:
 
 \`\`\`jsx
-import { toast } from 'shiba-ui';
+import { toast } from 'shiba-ui-kit';
 
 const toastSuccess = toast.success('Mensagem de exemplo');
 const toastError = toast.error('Mensagem de exemplo');
@@ -80,7 +80,7 @@ As propriedades que podem ser passadas para as funções de toast são:
 \`\`\`jsx
 const customToast = toast.success('Mensagem de exemplo', {
   timeout: 5000,
-  background: 'charcoal',
+  background: 'section',
   messageColor: 'secondary',
   borderColor: 'secondary',
   borderRadius: 'sm',
