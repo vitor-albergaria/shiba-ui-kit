@@ -1,0 +1,45 @@
+.inputRange {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+.inputRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: calc(18px + 0.8 * (var(--inputHeight, 8px) - 8px));
+  height: calc(18px + 0.8 * (var(--inputHeight, 8px) - 8px));
+  border-radius: 50%;
+  background: var(--pureWhite);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.inputRange::-moz-range-thumb {
+  width: calc(18px + 0.8 * (var(--inputHeight, 8px) - 8px));
+  height: calc(18px + 0.8 * (var(--inputHeight, 8px) - 8px));
+  border: none;
+  border-radius: 50%;
+  background: var(--pureWhite);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.inputRange:focus {
+  outline: none;
+}
+
+.inputRange:hover::-webkit-slider-thumb {
+  transform: scale(1.05);
+}
+
+.inputRange:hover::-moz-range-thumb {
+  transform: scale(1.05);
+}
+
+.fullWidth {
+  width: 100%;
+}
