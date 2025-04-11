@@ -19,5 +19,3 @@ export const Default: Story = {
     position: 'bottom',
   },
 };
-
-(Tooltip as React.FC).displayName = 'Tooltip';
