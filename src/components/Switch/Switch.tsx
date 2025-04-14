@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Switch.module.css';
 import { handleDynamicStyles } from '../../theme/helpers/handleDinamicStyles';
 
-const Switch: React.FC<ISwitch> = ({
+export const Switch: React.FC<ISwitch> = ({
   isChecked = false,
   handleChange = () => {},
   size = 28,
@@ -53,5 +53,3 @@ const Switch: React.FC<ISwitch> = ({
     </button>
   );
 };
-
-export default Switch;
