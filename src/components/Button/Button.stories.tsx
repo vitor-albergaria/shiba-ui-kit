@@ -103,7 +103,7 @@ const meta: Meta<IButton> = {
 
     padding: {
       control: 'text',
-      description: t('docs_predefined'),
+      description: t('docs_string'),
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '8px 16px' },
@@ -113,7 +113,7 @@ const meta: Meta<IButton> = {
 
     gap: {
       control: 'text',
-      description: t('docs_predefined'),
+      description: t('docs_string'),
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: '12px' },
