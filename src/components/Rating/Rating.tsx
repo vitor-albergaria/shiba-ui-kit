@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import { IRating, SpacingType } from './Rating.types';
+import { IRating } from './Rating.types';
 import styles from './Rating.module.css';
 import { handleDynamicStyles } from '../../theme/helpers/handleDinamicStyles';
-
-const noop = () => {};
 
 export const Rating: React.FC<IRating> = ({
   rating = 0,
   maxStars = 5,
   readonly = false,
-  handleChange = noop,
+  handleChange = () => {},
   size = 30,
-  gap = 'xs',
+  gap = '12px',
   background = 'warning',
   isHidden = false,
 }) => {
@@ -36,18 +34,6 @@ export const Rating: React.FC<IRating> = ({
     setHoverValue(null);
   };
 
-  const getGapClass = (gap: SpacingType) => {
-    const gapClasses = {
-      xs: styles.gapXs,
-      sm: styles.gapSm,
-      md: styles.gapMd,
-      lg: styles.gapLg,
-      xl: styles.gapXl,
-    };
-
-    return gapClasses[gap] || styles.gapXs;
-  };
-
   const renderStar = (position: number) => {
     const fillPercentage = Math.max(
       0,
@@ -56,8 +42,8 @@ export const Rating: React.FC<IRating> = ({
         currentValue >= position
           ? 100
           : currentValue > position - 1
-            ? (currentValue - (position - 1)) * 100
-            : 0
+          ? (currentValue - (position - 1)) * 100
+          : 0
       )
     );
 
@@ -67,24 +53,23 @@ export const Rating: React.FC<IRating> = ({
 
     const starFillStyle = handleDynamicStyles({
       fontSize: `${size}px`,
-      background,
+      color: background,
     });
 
-    // Aplicamos propriedades adicionais diretamente
     const customStarFillStyle = {
       ...starFillStyle,
-      WebkitBackgroundClip: 'text',
-      backgroundClip: 'text',
       width: `${fillPercentage}%`,
     };
 
     return (
       <div
         key={position}
-        className={`${styles.starContainer} ${!readonly ? styles.interactive : ''}`}
+        className={`${styles.starContainer} ${
+          !readonly ? styles.interactive : ''
+        }`}
         onMouseLeave={handleMouseLeave}
         style={{ fontSize: `${size}px` }}
-        role="radio"
+        role='radio'
         aria-checked={currentValue >= position}
         aria-label={`${position} star${position === 1 ? '' : 's'}`}
       >
@@ -96,13 +81,17 @@ export const Rating: React.FC<IRating> = ({
           />
         )}
 
-        <div className={styles.starBase} aria-hidden="true" style={starBaseStyle}>
+        <div
+          className={styles.starBase}
+          aria-hidden='true'
+          style={starBaseStyle}
+        >
           ★
         </div>
 
         <div
           className={styles.starFill}
-          aria-hidden="true"
+          aria-hidden='true'
           style={customStarFillStyle}
         >
           ★
@@ -113,18 +102,23 @@ export const Rating: React.FC<IRating> = ({
 
   const stars = Array.from({ length: maxStars }, (_, i) => renderStar(i + 1));
 
+  const starContainerStyle = handleDynamicStyles({
+    gap,
+  });
+
   if (isHidden) return null;
 
   return (
-    <div 
-      className={`${styles.ratingContainer} ${getGapClass(gap)}`}
-      data-testid="rating"
-      role="radiogroup"
+    <div
+      className={styles.ratingContainer}
+      data-testid='rating'
+      role='radiogroup'
       aria-label={`Rating: ${currentValue} out of ${maxStars} stars`}
+      style={starContainerStyle}
     >
       {stars}
     </div>
   );
 };
 
-export default Rating; 
+export default Rating;

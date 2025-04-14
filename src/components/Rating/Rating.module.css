@@ -3,26 +3,6 @@
   align-items: center;
 }
 
-.gapXs {
-  gap: 4px;
-}
-
-.gapSm {
-  gap: 8px;
-}
-
-.gapMd {
-  gap: 12px;
-}
-
-.gapLg {
-  gap: 16px;
-}
-
-.gapXl {
-  gap: 24px;
-}
-
 .starContainer {
   position: relative;
   display: inline-block;
@@ -60,7 +40,6 @@
   left: 0;
   z-index: 1;
   overflow: hidden;
-  color: transparent;
   white-space: nowrap;
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 } 
