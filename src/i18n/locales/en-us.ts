@@ -112,5 +112,31 @@ const customToast = toast.success('Mensagem de exemplo', {
       'To get started, install styled-components using npm or yarn:',
     docs_styling_description_two:
       'Once you have styled-components installed, use the useTheme hook to access the theme and pass it to your styled components:',
+    docs_image:
+      'Accepts a `string` to set the image source, which can be either a URL or a relative path to a local image.',
+    docs_content: 'Accepts a `string` to set the text content.',
+    docs_type_number: 'Accepts a `number` to specify the style.',
+    docs_predefined:
+      'Accepts predefined theme values or strings to define the style.',
+    docs_hide: 'Accepts a `boolean` to hide the component.',
+    docs_disabled: 'Accepts a `boolean` to set the component to disabled.',
+    docs_loading: 'Accepts a `boolean` to set the component to loading.',
+    docs_click: 'Aceita uma função para ser chamada ao clicar no componente.',
+    docs_value: 'Accepts a `number` to set the value.',
+    docs_header:
+      'Accepts an array of objects with id, label, handleClick function, and optionally isInactive to disable an item.',
+    docs_pie_chart_data:
+      "Accepts an array of objects, each containing 'percent', 'color', 'label' and 'onClick' to define pie chart segments.",
+    docs_full_width:
+      'Accepts a `boolean` to determine if the component should occupy the full available space.',
+    docs_string: 'Accepts a `string` to specify the style.',
+    docs_rating:
+      'Accepts a `number` to represent the current rating value, typically between 0 and `maxStars`.',
+    docs_maxStars:
+      'Accepts a `number` to set the maximum number of stars displayed for the rating.',
+    docs_readonly:
+      'Accepts a `boolean` to specify if the rating is read-only, preventing user interaction.',
+    docs_timeline:
+      'Accepts an array of objects with id, title, subtitle, and details (an array of strings).',
   },
 };

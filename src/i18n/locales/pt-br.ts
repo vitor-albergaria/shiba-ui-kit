@@ -115,5 +115,33 @@ const customToast = toast.success('Mensagem de exemplo', {
       'Para começar, instale o styled-components utilizando npm ou yarn:',
     docs_styling_description_two:
       'Após instalar o styled-components, use o hook useTheme para acessar o tema e passá-lo para seus componentes estilizados:',
+    docs_image:
+      'Aceita uma `string` para definir a fonte da imagem, que pode ser uma URL ou um caminho relativo para uma imagem local.',
+    docs_content: 'Aceita uma `string` para definir o conteúdo do texto.',
+    docs_type_number: 'Aceita um `number` para definir o estilo.',
+    docs_predefined:
+      'Aceita valores predefinidos no tema ou strings para definir o estilo.',
+    docs_hide: 'Aceita um `boolean` para ocultar o componente.',
+    docs_disabled:
+      'Aceita um `boolean` para definir o componente como desativado.',
+    docs_loading:
+      'Aceita um `boolean` para definir o componente como carregando.',
+    docs_click: 'Aceita uma função para ser chamada ao clicar no componente.',
+    docs_value: 'Aceita um `number` para definir o valor.',
+    docs_header:
+      'Aceita um array de objetos com id, label, handleClick function, e opcionalmente isInactive para desativar um item.',
+    docs_pie_chart_data:
+      'Aceita um array de objetos, cada um contendo "percent", "color", "label" e "onClick" para definir segmentos de gráfico de pizza.',
+    docs_full_width:
+      'Aceita um `boolean` para determinar se o componente deve ocupar todo o espaço disponível.',
+    docs_string: 'Aceita uma `string` para especificar o estilo.',
+    docs_rating:
+      'Aceita um `number` para representar o valor atual da avaliação, geralmente entre 0 e `maxStars`.',
+    docs_maxStars:
+      'Aceita um `number` para definir o número máximo de estrelas exibidas para a avaliação.',
+    docs_readonly:
+      'Aceita um `boolean` para especificar se a avaliação é de leitura, impedindo a interação do usuário.',
+    docs_timeline:
+      'Aceita um array de objetos com id, title, subtitle, e details (um array de strings).',
   },
 };
