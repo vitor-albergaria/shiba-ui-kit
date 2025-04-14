@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { Timeline } from './Timeline';
 import { ITimeline } from './Timeline.types';
 import { Meta, StoryObj } from '@storybook/react';
@@ -5,6 +6,27 @@ import { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<ITimeline> = {
   title: 'Components/Viewers/Timeline',
   component: Timeline,
+  argTypes: {
+    data: {
+      control: 'object',
+      description: t('docs_timeline'),
+      table: {
+        type: { summary: 'IHeader[]' },
+        defaultValue: { summary: 'undefined' },
+        category: 'Component',
+      },
+    },
+
+    isHidden: {
+      control: 'boolean',
+      description: t('docs_hide'),
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+        category: 'Component',
+      },
+    },
+  },
 };
 
 export default meta;
