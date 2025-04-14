@@ -11,7 +11,7 @@ export const ProgressBar: React.FC<IProgressBar> = ({
   height = 12,
   width = 200,
   isHidden = false,
-  showLabel = true,
+  hideLabel = false,
   isFullWidth = false,
 }) => {
   const clampValue = useCallback(
@@ -21,6 +21,10 @@ export const ProgressBar: React.FC<IProgressBar> = ({
   );
 
   const barProgressValue = clampValue(progressValue, 0, 100);
+
+  const barContainerStyles = handleDynamicStyles({
+    width: isFullWidth ? '100%' : `${width}px`,
+  });
 
   const barOuterStyles = handleDynamicStyles({
     height: `${height}px`,
@@ -43,6 +47,7 @@ export const ProgressBar: React.FC<IProgressBar> = ({
       aria-valuemin={0}
       aria-valuemax={100}
       aria-label={`Progress: ${barProgressValue}%`}
+      style={barContainerStyles}
     >
       <div
         className={styles.barOuter}
@@ -56,8 +61,8 @@ export const ProgressBar: React.FC<IProgressBar> = ({
         />
       </div>
 
-      {showLabel && (
-        <div aria-hidden='true'>
+      {!hideLabel && (
+        <div aria-hidden='true' className={styles.textContainer}>
           <TextDisplay text={`${barProgressValue}%`} fontSize='sm' />
         </div>
       )}

@@ -4,6 +4,6 @@ export interface IProgressBar {
   height?: number;
   width?: number;
   isHidden?: boolean;
-  showLabel?: boolean;
+  hideLabel?: boolean;
   isFullWidth?: boolean;
 } 
