@@ -24,7 +24,7 @@ const Switch: React.FC<ISwitch> = ({
   const dynamicStyles = handleDynamicStyles({
     height: `${size}px`,
     width: `${size * 2}px`,
-    background,
+    background: !switchIsChecked ? 'highlight' : background,
     borderRadius: `${size / 2}px`,
   });
 
