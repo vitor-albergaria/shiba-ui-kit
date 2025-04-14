@@ -1,5 +1,5 @@
 import { t } from 'i18next';
-import Switch from './Switch';
+import { Switch } from './Switch';
 import { ISwitch } from './Switch.types';
 import { Meta, StoryObj } from '@storybook/react';
 import { DOCS_COLOR_TYPES } from '../../docs/utils/constants';
