@@ -1,6 +1,7 @@
 import React from 'react';
 import * as iconList from '../../assets/icons/index';
 import { DefaultIconValues, IconKeys, IIcon } from './Icon.types';
+import { getThemeColor } from '../../theme/helpers/getTheme';
 
 export const Icon: React.FC<IIcon> = ({
   icon = DefaultIconValues.Icon,
@@ -24,7 +25,7 @@ export const Icon: React.FC<IIcon> = ({
       viewBox={view}
     >
       {path.map((data: string, index: number) => (
-        <path key={index} d={data} fill={`var(--${background})`} />
+        <path key={index} d={data} fill={getThemeColor(background)} />
       ))}
     </svg>
   );
